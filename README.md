@@ -16,7 +16,7 @@ This script is now more omnibus-gitlab centric. Compare your config file with th
 
 Deploy a working GitLab Omnibus installation and verify you can back it up with the rake task as documented in the [GitLab Documents](http://doc.gitlab.com/ce/raketasks/backup_restore.html).
 
-For Backblaze usage, configure your system for the [Backblaze Command-Line Tool](https://www.backblaze.com/b2/docs/quick_command_line.html) Also, see the [wiki page on B2](https://github.com/sund/auto-gitlab-backup/wiki/Backblaze-B2-Command-Line-Tool).
+For Backblaze usage, configure your system for the [Backblaze Command-Line Tool](https://www.backblaze.com/b2/docs/quick_command_line.html) Also, see the [wiki page on B2](https://github.com/ehime/GitlabBackup/wiki/Backblaze-B2-Command-Line-Tool).
 
 #### Set up gitlab to expire backups
 
@@ -32,20 +32,20 @@ gitlab_rails['backup_keep_time'] = 604800
 Clone to your directory of choice. I usually use ```/usr/local/sbin```
 
 ```
-git clone git@github.com:sund/auto-gitlab-backup.git
+git clone git@github.com:ehime/GitlabBackup.git
 ```
 
 ### Updates
 
-Compare the ```auto-gitlab-backup.conf.sample``` file with your own copy. Make changes as needed to ensure no errors are encountered.
+Compare the ```backup.conf.sample``` file with your own copy. Make changes as needed to ensure no errors are encountered.
 
 ### Configure
 
 ```bash
-cp auto-gitlab-backup.conf.sample auto-gitlab-backup.conf
+cp backup.conf.sample backup.conf
 ```
 
-edit ```auto-gitlab-backup.conf```
+edit ```backup.conf```
 
 ```bash
 ## user account on remote server
@@ -122,7 +122,7 @@ checkQuota="0"
 Example for crontab to run at 5:05am everyday.
 
 ```bash
-5 5 * * * /usr/local/sbin/auto-gitlab-backup/auto-gitlab-backup.sh
+5 5 * * * /usr/local/sbin/backup/backup.sh
 ```
 
 ## Restore
@@ -133,8 +133,8 @@ run ```./restoreGitLab.sh -r``` and it will attempt to restore a backup. You may
 
 ## Help
 
-See the [Wiki](https://github.com/sund/auto-gitlab-backup/wiki) for more detailed instructions or submit a [Issue](https://github.com/sund/auto-gitlab-backup/issues).
+See the [Wiki](https://github.com/ehime/GitlabBackup/wiki) for more detailed instructions or submit a [Issue](https://github.com/ehime/GitlabBackup/issues).
 
 ## Contribute
 
-See [Contribution Guide](https://github.com/sund/auto-gitlab-backup/blob/master/CONTRIBUTING.md) to improve this script.
+See [Contribution Guide](https://github.com/ehime/GitlabBackup/blob/master/CONTRIBUTING.md) to improve this script.
