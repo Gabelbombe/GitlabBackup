@@ -16,7 +16,7 @@ This script is now more omnibus-gitlab centric. Compare your config file with th
 
 Deploy a working GitLab Omnibus installation and verify you can back it up with the rake task as documented in the [GitLab Documents](http://doc.gitlab.com/ce/raketasks/backup_restore.html).
 
-For Backblaze usage, configure your system for the [Backblaze Command-Line Tool](https://www.backblaze.com/b2/docs/quick_command_line.html) Also, see the [wiki page on B2](https://github.com/ehime/GitlabBackup/wiki/Backblaze-B2-Command-Line-Tool).
+For Backblaze usage, configure your system for the [Backblaze Command-Line Tool](https://www.backblaze.com/b2/docs/quick_command_line.html) Also, see the [wiki page on B2](https://github.com/ehime/GitlabBackup/wiki/Backblaze-B2-CLI).
 
 #### Set up gitlab to expire backups
 
