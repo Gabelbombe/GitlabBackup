@@ -22,7 +22,7 @@ gitlabHome="$gitHome/gitlab"
 gitlab_rails="/opt/gitlab/embedded/service/gitlab-rails"
 PDIR=$(dirname $(readlink -f $0))
 dateStamp=`date +"%F %H:%m:%S"`
-confFile="$PDIR/auto-gitlab-backup.conf"
+confFile="$PDIR/backup.conf"
 if [[ $quietRake == 1 ]]
 then
   rakeBackup="gitlab-rake gitlab:backup:create CRON=1"
